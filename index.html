@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Testimonial Slider</title>
+   <style>
+   .container{
+   max-width:1200px;
+   width:100%;
+   position:relative;
+   margin:0 auto;
+   }
+    .mySwiper{
+    max-width: 1100px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    }
+    body{
+    background-color: #cccccc;
+    font-family: "Open Sans";
+    }
+    .card{
+    text-align: center;
+    background-color: #ffffff;
+    padding:20px 30px;
+    border-radius: 10px;
+	box-shadow:rgb(149 157 165 / 20%) 0px 8px 24px;
+    }
+	.swiper-slide{
+	display:flex;
+	align-items:center;
+	}
+    .card img{
+    width: 130px;
+    border-radius: 50%;
+	margin-top:-70px;
+    }
+    h3,h4{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    }
+	p{
+	font-size:15px;
+	line-height:20px;
+	color:#222222;
+	}
+    h3{
+    font-size: 16px;
+    }
+    h4{
+    font-size: 12px;
+    margin-top: 10px;
+    color:#0096FF;
+    }
+	.swiper-button-next, .swiper-rtl .swiper-button-prev{
+	color:#0096FF;
+	}
+	.swiper-button-next:after, .swiper-button-prev:after{
+	font-size:32px;
+	}
+	.review i{
+	color:orange;
+	}
+   </style>
+<body>
+     <!-- Swiper -->
+	 <div class="container">
+     <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="images/image1.jpg" alt="" srcset="">
+				<div class="review">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+				</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus</p>
+                <h3>Satya Nadella</h3>
+                <h4>CEO, Microsoft</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="images/image2.jpg" alt="" srcset="">
+				<div class="review">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fas fa-star-half"></i></i>
+				</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus</p>
+                <h3>Safra Catz</h3>
+                <h4>CEO, Oracle </h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="images/image3.jpg" alt="" srcset="">
+				<div class="review">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+				</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis aliquam est, ut libero doloribus</p>
+                <h3>Mark Zuckerberg</h3>
+                <h4>CEO, Facebook</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+	    <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    var slider = new  Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        breakpoints: {  
+        '480': {
+        slidesPerView: 2,
+        spaceBetween: 40,},
+        '640': {
+        slidesPerView: 3,
+        spaceBetween: 50, },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+        }
+    })
+</script>
+</body>
+</html>
